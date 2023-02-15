@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    
+  </head>
+  <body onload="onInit()">
+  <header>
+    <h1>meme maker</h1>
+    <nav class="main-nav">
+        <ul class="main-men">
+          <button class="nav-bt" href="#">Gallery</button>
+          <button class="nav-bt" href="#">Make your meme</button>
+        </ul>
+      </nav>
+</header>
+
+<button class="controll-btn" id = "up" onclick="moveLine(this.id)"> text up </button>
+<button class="controll-btn" id = "down" onclick="moveLine(this.id)">text down</button>
+<button class="controll-btn" id = "changeLine" onclick="changeLine()">change line</button>
+<input type="color" oninput="changeColor(this.value)" />
+<label for="txt">Enter your text</label>
+<input type="text" name="txt" id="txt" placeholder="your text" class="txt" />
+
+
+<div class="canvas-container flex">
+
+    <canvas id="my-canvas" width="300" height="300" style="outline: 5px solid black"></canvas>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
