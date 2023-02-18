@@ -1,0 +1,179 @@
+body{
+    display: grid;
+    background-color: lavender;
+}
+
+.display{
+    display: none;
+    
+}
+
+.controll-img{
+    width:20px
+}
+
+.my-gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.my-gallery.display{
+    display: none;
+}
+.gallery-img {
+    display: flex;
+    margin: 20px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+     
+  } 
+
+
+.gallery-img:hover{
+    opacity: 50%;
+    box-shadow: 3px 3px 3px gray;
+  }
+
+
+header {
+        position: relative;
+        background-color: lightgreen;
+        color: black;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        z-index: 1;
+        box-shadow: inset 0px -6px 0 lightgray;
+        justify-content: flex-end;
+        padding-top: 2em;
+        padding-bottom: 2em;
+}
+
+.title{
+    text-align: left;
+    margin: 0 auto;
+    position: absolute;
+    margin-right: 20px;
+    padding-right: 1em;
+    padding-left: 10px;
+    
+}
+
+.main-nav{
+    display: flex;
+    justify-self:flex-end;
+    float: right;
+
+}
+
+.main-controller{
+    display: grid;
+}
+
+.text-controller{
+    display: flex;
+    justify-content: center;
+}
+
+.line-controller{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.style-controller{
+    display: flex;
+    padding: 5px;
+    justify-content: center;
+    margin: 5px;
+    
+}
+
+.controll-btn{
+    background-color: lightblue;
+   border-radius: 4px;
+   color: black;
+   padding: 10px;
+   text-align: center;
+   display: inline-block;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   margin-top: 10px;
+   margin-left: 10px;
+   margin-right: 10px;
+   
+}
+
+.nav-bt{
+    background-color: lightgreen;
+   border-radius: 4px;
+   color: black;
+   padding: 10px;
+   text-align: center;
+   display: inline-block;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   margin-right: 5px;
+}
+
+.nav-bt:hover{
+    opacity: 70%;
+}
+
+.controll-btn:hover{
+    opacity: 70%;
+    box-shadow: 2px 2px 2px;
+}
+
+.text-input{
+    border-radius: 4px;
+    height: 40px;
+   margin-top: auto;
+    
+}
+
+label{
+    margin-top:20px;
+    margin-right: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.download{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+}
+
+.color-controller{
+    margin-top: 15px;
+}
+
+.current-row{
+    font-size: 20px;
+    margin: inherit;
+    margin-right: 10px;
+    margin-top: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+canvas{
+    margin-top: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
+}
+
+.my-canvas{
+    display: flex;
+    margin: 10px;
+}
+
+.select-font{
+    margin-top:10px;
+}
+
+
+
+
+

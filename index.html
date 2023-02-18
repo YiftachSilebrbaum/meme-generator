@@ -8,29 +8,65 @@
     
   </head>
   <body onload="onInit()">
-  <header>
-    <h1>meme maker</h1>
-    <nav class="main-nav">
-        <ul class="main-men">
-          <button class="nav-bt" href="#">Gallery</button>
-          <button class="nav-bt" href="#">Make your meme</button>
-        </ul>
+  <header class="main-header">
+    <h1 class="title">meme generator</h1>
+    <nav class="main-nav full">
+          <button class="nav-bt" href="#" onclick="revealGallery()">Gallery</button>
+          <button class="nav-bt" href="#" onclick="revealMeme()">Make your meme</button>    
       </nav>
 </header>
 
-<button class="controll-btn" id = "up" onclick="moveLine(this.id)"> text up </button>
+<main class="main-layout">
+  <div class="main-controller">
+
+    <div class="text-controller">
+<button class="controll-btn" id = "up" onclick="moveLine(this.id)">text up</button>
 <button class="controll-btn" id = "down" onclick="moveLine(this.id)">text down</button>
-<button class="controll-btn" id = "changeLine" onclick="changeLine()">change line</button>
-<input type="color" oninput="changeColor(this.value)" />
+<button class="controll-btn" id = "left" onclick="moveLine(this.id)">text left</button>
+<button class="controll-btn" id = "right" onclick="moveLine(this.id)">text right</button>
+<button class="controll-btn plus" id = "+" onclick="changeFontSize(this.id)">
+  <img class="controll-img" src="img/increase-font.png"/>
+</button>
+<button class="controll-btn" id = "-" onclick="changeFontSize(this.id)">
+  <img class="controll-img" src="img/decrease-font.png"/></button>
+</div>
+  <div class="line-controller">
+    <button class="controll-btn" id = "changeLine" onclick="addNewLine()">
+      <img class="controll-img" src="img/addLine.png"/></button>
+<button class="controll-btn" id = "changeLine" onclick="changeLine()">
+  <img class="controll-img" src="img/up-down.png"/></button>
 <label for="txt">Enter your text</label>
-<input type="text" name="txt" id="txt" placeholder="your text" class="txt" />
+<input class="text-input" type="text"  id="txt" placeholder="text"/>
+<button class="controll-btn" onclick="changeText()">change</button>
+</div>
 
+<div class="style-controller">
+  <h2 class="current-row">current row:<span class="my-row"> </span></h2>
+<input class="color-controller" type="color" oninput="changeColor(this.value)"/>
+<form>
+<select class="select-font controll-btn" id="select-font"  onchange="changeFont(this.value)">
+  <option value="impact">impact</option>
+  <option value="Arial">Arial</option>
+  <option value="Times">Times</option>
+</select>
+</form>
+<a href="#" class="download" onclick="downloadCanvas(this)" download="file-name">Download</a>
+<button class="controll-btn" type="button" onClick="window.location.reload()">
+  <img class="controll-img" src="img/trash.png"/></button>
+</div>
 
-<div class="canvas-container flex">
+<div class="canvas-container">
 
     <canvas id="my-canvas" width="300" height="300" style="outline: 5px solid black"></canvas>
 </div>
 
+</main>
+
+<div id="my-gallery" class="my-gallery display">
+
+</div>
+
 <script src="main.js"></script>
+<script src="gallery.js"></script>
 </body>
 </html>
